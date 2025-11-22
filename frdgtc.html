@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"/>
+  <title>서진이 엄마 수</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <style>
+    /* 배경 이미지 추가: 같은 폴더에 jingjing.jpg 를 넣거나 URL로 교체하세요 */
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      margin:0;
+      font-family:sans-serif;
+      background: ('c:\Users\PC_1M\Desktop\새 폴더\c5fac83a773ca2a4f112221647682c1e.jpg') center/cover no-repeat;
+      /* 이미지가 없을 때 대비한 배경색 */
+      
+    }
+    /* 카드 배경을 반투명으로 해 가독성 유지 */
+    .card{
+      padding:24px;
+      border-radius:12px;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow:0 6px 24px rgba(0,0,0,.08);
+      text-align:center;
+    }
+    button{padding:10px 16px;border:0;border-radius:8px;background:#ff6b6b;color:#fff;font-weight:700;cursor:pointer}
+    small{display:block;margin-top:8px;color:#666}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>서진이 엄마 수 감소</h1>
+    <button id="action">클릭하면 엄마 감소</button>
+    <small id="status">서진이 엄마 수: 0</small>
+  </div>
+  <script>
+    const btn = document.getElementById('action');
+    const status = document.getElementById('status');
+    let count = 0;
+    btn.addEventListener('click', () => {
+      count--; // 숫자 감소
+      status.textContent = '서진이 엄마 수: ' + count;
+      console.log('서진이 엄마 수:', count);
+    });
+  </script>
+</body>
+</html>
